@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="553.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminViewControllers">
+   <children>
+      <TabPane layoutX="5.0" layoutY="7.0" prefHeight="531.0" prefWidth="963.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Members">
+            <content>
+              <AnchorPane fx:id="content" minHeight="0.0" minWidth="0.0" onMouseEntered="#contentHandler" prefHeight="462.0" prefWidth="681.0" style="-fx-background-color: #2cdad0;">
+                     <children>
+                        <ImageView fitHeight="250.0" fitWidth="235.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pull_up.jpg" />
+                           </image></ImageView>
+                        <Label layoutX="28.0" layoutY="270.0" prefHeight="25.0" prefWidth="140.0" text="Register Number :" textFill="#09070d">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <TextField fx:id="registerMemberTxtF" layoutX="28.0" layoutY="310.0" onAction="#textHandler" />
+                        <Label layoutX="432.0" layoutY="24.0" prefHeight="28.0" prefWidth="196.0" text="Create a new Member" textFill="#0d0e17">
+                           <font>
+                              <Font size="19.0" />
+                           </font></Label>
+                        <GridPane layoutX="327.0" layoutY="78.0" prefHeight="362.0" prefWidth="338.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Last Name" textFill="#09070d">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <Label text="First Name " textFill="#09070d" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <Label text="Date of birth" textFill="#09070d" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <Label text="Phone Number" textFill="#09070d" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <Label text="Gender" textFill="#09070d" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <Label text="Email" textFill="#09070d" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <Label text="Address" textFill="#09070d" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <TextField fx:id="LNameTxtF" prefHeight="25.0" prefWidth="173.0" GridPane.columnIndex="1" />
+                              <TextField fx:id="FNameTxt" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="PhoneTxtF" promptText="Ex: 111-222-6666" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="EmailTxtF" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextArea fx:id="AddressTxtArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <VBox GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <children>
+                                    <RadioButton fx:id="maleRdiobtn" mnemonicParsing="false" text="Male">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="genders" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="femaleRdiobtn" mnemonicParsing="false" text="Female" toggleGroup="$genders">
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </RadioButton>
+                                 </children>
+                              </VBox>
+                              <DatePicker fx:id="dateOFBirthTxtF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="createMemberbnt" layoutX="872.0" layoutY="450.0" mnemonicParsing="false" onAction="#createMemberHandler" text="Create" textFill="#251d39">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Button>
+                        <Button fx:id="logoutbtn" layoutX="874.0" layoutY="25.0" mnemonicParsing="false" onAction="#logoutbtnAction" text="Log_Out" />
+                        <Button fx:id="ClearButton" layoutX="751.0" layoutY="450.0" mnemonicParsing="false" onAction="#ClearButtonAction" prefHeight="31.0" prefWidth="59.0" text="Clear" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Update/delete Members">
+            <content>
+              <AnchorPane fx:id="secondcontent" minHeight="0.0" minWidth="0.0" onMouseEntered="#contentHandler" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #2cdad0;">
+                     <children>
+                        <Label layoutX="49.0" layoutY="45.0" prefHeight="21.0" prefWidth="157.0" text="Registration Number: " textFill="#2a1f3c">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <TextField fx:id="rgisterNberup_deltxtF" layoutX="246.0" layoutY="43.0" onAction="#textHandler" />
+                        <Button fx:id="searchBtnUp_delt" layoutX="430.0" layoutY="43.0" mnemonicParsing="false" onAction="#searchTo_UpdateAction" text="Search" />
+                        <GridPane layoutX="49.0" layoutY="113.0" prefHeight="295.0" prefWidth="542.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Last Name" textFill="#21173c">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                              <Label text="First Name" textFill="#21173c" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                              <Label text="Date of  birth" textFill="#21173c" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                              <Label text="Phone Number" textFill="#21173c" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                              <Label text="Gender" textFill="#21173c" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                              <Label text="Email" textFill="#21173c" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                              <Label text="Address" textFill="#21173c" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font></Label>
+                              <TextField fx:id="lnametxtF" GridPane.columnIndex="1" />
+                              <TextField fx:id="fnametxtF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="DOBTxtF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="phoneTxtF" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="emailTxtF" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <TextArea fx:id="addressTxtArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField fx:id="genderTxtF" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="Updatebtn" layoutX="49.0" layoutY="448.0" mnemonicParsing="false" onAction="#UpdateAction" text="Update" />
+                        <Button fx:id="deleteBtn" layoutX="155.0" layoutY="448.0" mnemonicParsing="false" onAction="#deleteAction" text="Delete" />
+                        <Button fx:id="nextBtn" layoutX="343.0" layoutY="448.0" mnemonicParsing="false" onAction="#nextAction" text="Next" />
+                        <Button fx:id="previousbtn" layoutX="471.0" layoutY="448.0" mnemonicParsing="false" onAction="#PreviousAction" text="Previous" />
+                        <Button fx:id="clearinfobtn" layoutX="255.0" layoutY="448.0" mnemonicParsing="false" onAction="#clearAction" text="Clear" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="View all Members">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #2cdad0;">
+                     <children>
+                        <TableView fx:id="tableMemberView" layoutX="3.0" layoutY="71.0" prefHeight="420.0" prefWidth="963.0">
+                          <columns>
+                            <TableColumn fx:id="regist_NumCol" prefWidth="106.0" text="Register_Num" />
+                            <TableColumn fx:id="lnameCol" text="LastName" />
+                              <TableColumn fx:id="fnameCol" prefWidth="126.0" text="FName" />
+                              <TableColumn fx:id="DOB_Col" prefWidth="98.0" text="DOB" />
+                              <TableColumn fx:id="PhoneNum_Col" prefWidth="113.0" text="PhoneNumber" />
+                              <TableColumn fx:id="GenderCol" prefWidth="66.0" text="Gender" />
+                              <TableColumn fx:id="emailCol" prefWidth="166.0" text="Email" />
+                              <TableColumn fx:id="addressCol" prefWidth="207.0" text="Address" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="refreshtbalebtn" layoutX="855.0" layoutY="22.0" mnemonicParsing="false" onAction="#refreshtbaAction" text="Refresh table" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Check Member Activities">
+              <content>
+                <AnchorPane fx:id="thirdContent" minHeight="0.0" minWidth="0.0" onMouseEntered="#contentHandler" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #2cdad0;">
+                     <children>
+                        <TableView fx:id="sessionTableView" layoutX="-2.0" layoutY="126.0" prefHeight="360.0" prefWidth="963.0">
+                          <columns>
+                            <TableColumn fx:id="session_ID_Col" prefWidth="89.0" text="Session_ID" />
+                            <TableColumn fx:id="Push_upCol" prefWidth="79.0" text="Push_Up" />
+                              <TableColumn fx:id="Pull_UpCol" prefWidth="193.0" text="Pull_Up" />
+                              <TableColumn fx:id="Performance_RsltCol" prefWidth="175.0" text="Performance Result" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Label layoutX="37.0" layoutY="70.0" text="Registration Number: ">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <TextField fx:id="rgisterNmberTxtF" layoutX="199.0" layoutY="66.0" onAction="#textHandler" />
+                        <Button fx:id="searchbutton" layoutX="395.0" layoutY="66.0" mnemonicParsing="false" onAction="#searchbuttonAction" text="Search" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

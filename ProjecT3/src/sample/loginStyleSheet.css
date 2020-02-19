@@ -1,0 +1,18 @@
+#anchorPaneIdLog{
+        -fx-background-color:#353631;
+}
+
+#titleID{
+        -fx-background-color:#d6800f;
+}
+
+.logLabel{
+        -fx-text-fill: white;
+}
+
+#loginButId{
+            -fx-background-color:#6668d1;
+}
+#registerbutId{
+            -fx-background-color:#cc3a27;
+}
