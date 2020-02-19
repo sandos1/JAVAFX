@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="708.0" prefWidth="1031.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="600.0">
+         <children>
+            <VBox layoutX="4.0" layoutY="85.0" prefHeight="313.0" prefWidth="138.0">
+               <children>
+                  <AnchorPane prefHeight="348.0" prefWidth="138.0">
+                     <children>
+                        <CheckBox fx:id="BurgerChckBox" layoutX="26.0" layoutY="30.0" mnemonicParsing="false" onAction="#BurgerChckBoxHandlerEvent" text="Burger" />
+                        <CheckBox fx:id="FriedChckBox" layoutX="26.0" layoutY="178.0" mnemonicParsing="false" onAction="#FriedChckBoxHandlerEvent" text="Fried" />
+                        <CheckBox fx:id="DrinkChckBox" layoutX="30.0" layoutY="320.0" mnemonicParsing="false" onAction="#DrinkChckBoxHandlerEvent" text="Drink" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox layoutX="170.0" layoutY="91.0" prefHeight="389.0" prefWidth="173.0">
+               <children>
+                  <HBox prefHeight="115.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="103.0" prefWidth="199.0">
+                           <children>
+                              <Label text="choice for buger">
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <RadioButton fx:id="Burger_regularRdo" mnemonicParsing="false" onAction="#burgerRadioHandler" text="Regular ($4.10)">
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </VBox.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="burger" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="bug_withCheeserdo" mnemonicParsing="false" onAction="#burgerRadioHandler" text="w/Cheese (4.79)" toggleGroup="$burger">
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="bug_withBaconrdo" mnemonicParsing="false" onAction="#burgerRadioHandler" text="w/bacon (4.79)" toggleGroup="$burger">
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="bug_cheeseBaconrdo" mnemonicParsing="false" onAction="#burgerRadioHandler" text="w/Cheese &amp; bacon ($5.20)" toggleGroup="$burger">
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox>
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox prefHeight="117.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="99.0" prefWidth="199.0">
+                                 <children>
+                                    <Label text="Choice for Fried">
+                                       <VBox.margin>
+                                          <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <RadioButton fx:id="fried_smallrdo" mnemonicParsing="false" onAction="#fried_RadioHandler" text="Small ($2.50)">
+                                       <VBox.margin>
+                                          <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                       </VBox.margin>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="fried" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="fried_mediumrdo" mnemonicParsing="false" onAction="#fried_RadioHandler" text="Medium ($3.70)" toggleGroup="$fried">
+                                       <VBox.margin>
+                                          <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                       </VBox.margin>
+                                    </RadioButton>
+                                    <RadioButton fx:id="fried_largerdo" mnemonicParsing="false" onAction="#fried_RadioHandler" text="Large ($4.20)" toggleGroup="$fried">
+                                       <VBox.margin>
+                                          <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                       </VBox.margin>
+                                    </RadioButton>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="115.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox prefHeight="97.0" prefWidth="199.0">
+                           <children>
+                              <Label text="Choice for Drink">
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <RadioButton fx:id="drink_Cokerdo" mnemonicParsing="false" onAction="#drink_RadioHandler" text="Coke ($2.00)">
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </VBox.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="drink" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="drink_fantardo" mnemonicParsing="false" onAction="#drink_RadioHandler" text="Fanta ($2.00)" toggleGroup="$drink">
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="drink_Pepsirdo" mnemonicParsing="false" onAction="#drink_RadioHandler" text="Pepsi ($2.00)" toggleGroup="$drink">
+                                 <VBox.margin>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button fx:id="submitButton" defaultButton="true" layoutX="14.0" layoutY="562.0" mnemonicParsing="false" onAction="#SubmitHandlerEvent" text="Submit" />
+            <TextField fx:id="Cost_TxtField" layoutX="437.0" layoutY="525.0" />
+            <Label layoutX="456.0" layoutY="497.0" text="Total Cost of Meal" />
+            <AnchorPane layoutX="381.0" layoutY="86.0">
+               <children>
+                  <ImageView fx:id="imgViewBurger" fitHeight="120.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imgViewFried" fitHeight="118.0" fitWidth="171.0" layoutX="1.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imgViewdrink" fitHeight="107.0" fitWidth="172.0" layoutY="292.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="14.0" prefHeight="37.0" prefWidth="672.0" text="MENU">
+               <font>
+                  <Font name="Harrington" size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="printbutton" layoutX="163.0" layoutY="562.0" mnemonicParsing="false" onAction="#printInventory_HandlerEvent" text="Print Inventory" />
+            <Button fx:id="BillsBtn" layoutX="324.0" layoutY="525.0" mnemonicParsing="false" onAction="#BillsBtnHandlerEvent" text="print Bills" />
+            <Button fx:id="Cancel_order" layoutX="324.0" layoutY="562.0" mnemonicParsing="false" onAction="#Cancel_orderHandler_Event" text="Cancel Order" />
+            <ChoiceBox fx:id="deliveryChoicebox" layoutX="107.0" layoutY="502.0" prefWidth="150.0" />
+            <Label layoutX="5.0" layoutY="506.0" text="Delivery Type" />
+            <Text layoutX="131.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane BorderPane.alignment="TOP_LEFT">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <ImageView fitHeight="107.0" fitWidth="185.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../chefpic.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="136.0" layoutY="22.0" prefHeight="82.0" prefWidth="882.0" text="We welcome Everyone" textFill="#26a387">
+               <font>
+                  <Font name="Ink Free" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <right>
+      <VBox prefHeight="430.0" prefWidth="404.0" style="-fx-background-color: #a9d7d9;" BorderPane.alignment="TOP_LEFT">
+         <BorderPane.margin>
+            <Insets bottom="140.0" top="80.0" />
+         </BorderPane.margin>
+         <children>
+            <Label alignment="CENTER" prefHeight="32.0" prefWidth="446.0" text="Invoice">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" right="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextArea fx:id="txtArea_for_Inventory" prefHeight="311.0" prefWidth="384.0">
+               <VBox.margin>
+                  <Insets bottom="90.0" right="20.0" />
+               </VBox.margin>
+            </TextArea>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>
