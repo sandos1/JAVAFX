@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegisterNewMemberViewController">
+   <children>
+      <Label layoutX="72.0" layoutY="107.0" text="Username  : " />
+      <Label layoutX="73.0" layoutY="155.0" text="PassWord :  " />
+      <Label layoutX="74.0" layoutY="285.0" text="Date : " />
+      <TextField fx:id="userNameTxtF" layoutX="181.0" layoutY="103.0" />
+      <PasswordField fx:id="PassswordField" layoutX="181.0" layoutY="151.0" />
+      <DatePicker fx:id="registDate" layoutX="181.0" layoutY="290.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button fx:id="addbtn" layoutX="181.0" layoutY="390.0" mnemonicParsing="false" onAction="#addbtnHandler" text="Add" />
+      <Button fx:id="gobacklogpagebtn" layoutX="330.0" layoutY="390.0" mnemonicParsing="false" onAction="#gobacklogpagebtnHandler" text="go back log page" />
+      <Label layoutX="77.0" layoutY="200.0" text="LastName" />
+      <Label layoutX="77.0" layoutY="236.0" text="FirstName" />
+      <TextField fx:id="lNameTxtF" layoutX="181.0" layoutY="196.0" />
+      <TextField fx:id="FNameTxtF" layoutX="181.0" layoutY="232.0" />
+   </children>
+</AnchorPane>

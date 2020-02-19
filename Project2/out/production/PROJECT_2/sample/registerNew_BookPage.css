@@ -1,0 +1,11 @@
+#registerNewBookview{
+                    -fx-background-color:#70acb8;
+}
+.label_registerView{
+                    -fx-font-family: TRON;
+                     -fx-font-size: 22px;
+}
+
+.register_buttoncLass{
+                    -fx-background-color:#cc434f;
+}
